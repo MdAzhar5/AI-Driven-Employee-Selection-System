@@ -1,5 +1,5 @@
 import streamlit as st
-from analyzer import jd_create, questions_create, transcript_create, analyses_scoring
+from interview_analyzer.analyzer import jd_create, questions_create, transcript_create, analyses_scoring
 
 # --- PAGE CONFIG ---
 st.set_page_config(
