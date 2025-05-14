@@ -1,4 +1,4 @@
-<h1 align="center">🤖 RecruitX: Agentic Generative AI Recruitment Platform</h1>
+<h1 align="center">🤖 RecruitX: AI Recruitment</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Built%20With-CrewAI-blue?style=flat-square" />
