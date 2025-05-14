@@ -26,7 +26,52 @@ RecruitX automates the full recruitment cycle using autonomous agents. It transf
 </ul>
 
 ---
+<h2>🚀 Installation</h2>
 
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/RecruitX.git
+cd RecruitX
+
+# 2. Set up a virtual environment
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Launch Streamlit Frontend
+streamlit run frontend/streamlit_app.py
+```
+---
+
+<h2>🧠 System Architecture</h2>
+
+<h3>🎭 Agents</h3>
+
+- <strong>JD Research Agent:</strong> Gathers info from hiring team
+- <strong>JD Drafting Agent:</strong> Writes optimized JDs
+- <strong>Job Posting Agent:</strong> Posts to job boards
+- <strong>Applicant Collector Agent:</strong> Parses and stores resumes
+- <strong>Screening Agent:</strong> Scores resume vs JD
+- <strong>Interview Scheduler Agent:</strong> Auto-books interviews
+- <strong>Email Automation Agent:</strong> Sends interview/offers
+- <strong>Question Generator Agent:</strong> Creates technical questions
+- <strong>Transcript Analyst Agent:</strong> Analyzes performance
+- <strong>Decision Agent:</strong> Calculates final selection
+- <strong>Database Agent:</strong> Stores, updates applicant records
+
+<h3>🛠️ Tools</h3>
+
+- PDF/DOCX Parser (PyMuPDF, docx2txt)
+- Vector Database (FAISS or Pinecone)
+- Whisper (for transcripts)
+- BERT/GPT Embeddings
+- Google Calendar API
+- SendGrid Email API
+- MySQL/MongoDB
+
+---
 <h2>📁 Repository Structure</h2>
 
 <pre>
@@ -84,50 +129,3 @@ RecruitX/
 ├── README.md
 └── .gitignore
 </pre>
-
----
-
-<h2>🧠 System Architecture</h2>
-
-<h3>🎭 Agents</h3>
-
-- <strong>JD Research Agent:</strong> Gathers info from hiring team
-- <strong>JD Drafting Agent:</strong> Writes optimized JDs
-- <strong>Job Posting Agent:</strong> Posts to job boards
-- <strong>Applicant Collector Agent:</strong> Parses and stores resumes
-- <strong>Screening Agent:</strong> Scores resume vs JD
-- <strong>Interview Scheduler Agent:</strong> Auto-books interviews
-- <strong>Email Automation Agent:</strong> Sends interview/offers
-- <strong>Question Generator Agent:</strong> Creates technical questions
-- <strong>Transcript Analyst Agent:</strong> Analyzes performance
-- <strong>Decision Agent:</strong> Calculates final selection
-- <strong>Database Agent:</strong> Stores, updates applicant records
-
-<h3>🛠️ Tools</h3>
-
-- PDF/DOCX Parser (PyMuPDF, docx2txt)
-- Vector Database (FAISS or Pinecone)
-- Whisper (for transcripts)
-- BERT/GPT Embeddings
-- Google Calendar API
-- SendGrid Email API
-- MySQL/MongoDB
-
----
-
-<h2>🚀 Installation</h2>
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/RecruitX.git
-cd RecruitX
-
-# 2. Set up a virtual environment
-python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Launch Streamlit Frontend
-streamlit run frontend/streamlit_app.py
