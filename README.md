@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🤖 RecruitX AI</h1>
+  <h1>🤖 RecruitX</h1>
   <p>AI-Powered Recruitment Automation System</p>
 
   <div>
