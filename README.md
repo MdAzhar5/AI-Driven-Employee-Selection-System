@@ -55,7 +55,7 @@
 
 <h2 id="installation">⚙️ Installation</h2>
 <pre><code># Clone repository
-git clone https://github.com/yourusername/recruitx.git
+git clone https://github.com/MdAzhar5/RecruitX.git
 
 # Install dependencies
 pip install -r requirements.txt
