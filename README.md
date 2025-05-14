@@ -73,7 +73,7 @@ cp .env.example .env
 
 <h2 id="agents">🤖 Agent Architecture</h2>
 <div align="center">
-  <img src="https://example.com/agent-architecture.png" width="600" alt="Agent Architecture">
+  <img src="https://img.shields.io/badge/Agent_Architecture-CrewAI_System-blue?logo=amazonaws&logoColor=white&style=for-the-badge" width="600" alt="Agent Architecture">
 </div>
 
 <h3>Core Agents</h3>
