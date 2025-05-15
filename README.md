@@ -1,101 +1,131 @@
-<div align="center">
-  <h1>🤖 RecruitX</h1>
-  <p>AI-Powered Recruitment Automation System</p>
+<h1 align="center">🤖 RecruitX: AI Recruitment</h1>
 
-  <div>
-    <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version">
-    <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
-    <img src="https://img.shields.io/badge/Python-3.10%2B-yellow" alt="Python">
-  </div>
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20With-CrewAI-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Frontend-Streamlit-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/LLM-GPT%204-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=flat-square" />
+</p>
 
-<h2>📌 Table of Contents</h2>
+<p align="center">
+  <strong>RecruitX</strong> is an agentic, generative AI-powered recruitment system built with <code>CrewAI</code>, streamlining the entire hiring pipeline — from JD creation to interview scoring and onboarding automation.
+</p>
+
+---
+
+<h2>🌐 Project Overview</h2>
+
+RecruitX automates the full recruitment cycle using autonomous agents. It transforms how hiring teams:
+
 <ul>
-  <li><a href="#overview">Overview</a></li>
-  <li><a href="#features">Features</a></li>
-  <li><a href="#installation">Installation</a></li>
-  <li><a href="#usage">Usage</a></li>
-  <li><a href="#agents">Agent Architecture</a></li>
-  <li><a href="#contributing">Contributing</a></li>
-  <li><a href="#license">License</a></li>
+  <li>Create and manage job descriptions</li>
+  <li>Collect and screen resumes at scale</li>
+  <li>Schedule interviews and analyze transcripts</li>
+  <li>Score candidates using custom AI agents</li>
+  <li>Manage decisions and onboarding flows</li>
 </ul>
 
-<h2 id="overview">🚀 Overview</h2>
-<p>RecruitX revolutionizes hiring through AI agents that handle:</p>
-<ul>
-  <li>✅ Job Description Generation</li>
-  <li>📄 Resume Screening & Scoring</li>
-  <li>🎯 Interview Automation</li>
-  <li>🤖 AI-Powered Decision Making</li>
-</ul>
+---
+<h2>🚀 Installation</h2>
 
-<h2 id="features">✨ Key Features</h2>
-<table>
-  <tr>
-    <th>Module</th>
-    <th>Capabilities</th>
-  </tr>
-  <tr>
-    <td>JD Builder</td>
-    <td>AI-generated job descriptions with 10+ templates</td>
-  </tr>
-  <tr>
-    <td>Resume Parser</td>
-    <td>PDF/DOCX parsing with 95% accuracy</td>
-  </tr>
-  <tr>
-    <td>AI Screening</td>
-    <td>Semantic matching using Sentence-BERT</td>
-  </tr>
-  <tr>
-    <td>Interview Agent</td>
-    <td>Auto-generated questions & transcript analysis</td>
-  </tr>
-</table>
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/RecruitX.git
+cd RecruitX
 
-<h2 id="installation">⚙️ Installation</h2>
-<pre><code># Clone repository
-git clone https://github.com/MdAzhar5/RecruitX.git
+# 2. Set up a virtual environment
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
 
-# Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# Configure environment
-cp .env.example .env
-</code></pre>
+# 4. Launch Streamlit Frontend
+streamlit run frontend/streamlit_app.py
+```
+---
 
-<h2 id="usage">📋 Basic Usage</h2>
-<h3>1. Create Job Description</h3>
-<pre><code>python recruitx.py jd create --role "Senior Developer"</code></pre>
+<h2>🧠 System Architecture</h2>
 
-<h3>2. Process Applicants</h3>
-<pre><code>python recruitx.py process --jd senior_dev.yaml --resumes ./resumes/</code></pre>
+<h3>🎭 Agents</h3>
 
-<h2 id="agents">🤖 Agent Architecture</h2>
-<div align="center">
-  <img src="https://example.com/agent-architecture.png" width="600" alt="Agent Architecture">
-</div>
+- <strong>JD Research Agent:</strong> Gathers info from hiring team
+- <strong>JD Drafting Agent:</strong> Writes optimized JDs
+- <strong>Job Posting Agent:</strong> Posts to job boards
+- <strong>Applicant Collector Agent:</strong> Parses and stores resumes
+- <strong>Screening Agent:</strong> Scores resume vs JD
+- <strong>Interview Scheduler Agent:</strong> Auto-books interviews
+- <strong>Email Automation Agent:</strong> Sends interview/offers
+- <strong>Question Generator Agent:</strong> Creates technical questions
+- <strong>Transcript Analyst Agent:</strong> Analyzes performance
+- <strong>Decision Agent:</strong> Calculates final selection
+- <strong>Database Agent:</strong> Stores, updates applicant records
 
-<h3>Core Agents</h3>
-<ul>
-  <li><strong>JD Builder Agent</strong>: Creates job descriptions</li>
-  <li><strong>Resume Parser Agent</strong>: Extracts candidate data</li>
-  <li><strong>Scoring Agent</strong>: Matches resumes to JDs</li>
-  <li><strong>Interview Agent</strong>: Manages Q&A analysis</li>
-</ul>
+<h3>🛠️ Tools</h3>
 
-<h2 id="contributing">👥 Contributing</h2>
-<ol>
-  <li>Fork the repository</li>
-  <li>Create your feature branch (<code>git checkout -b feature/amazing</code>)</li>
-  <li>Commit changes (<code>git commit -m 'Add amazing feature'</code>)</li>
-  <li>Push to branch (<code>git push origin feature/amazing</code>)</li>
-  <li>Open a Pull Request</li>
-</ol>
+- PDF/DOCX Parser (PyMuPDF, docx2txt)
+- Vector Database (FAISS or Pinecone)
+- Whisper (for transcripts)
+- BERT/GPT Embeddings
+- Google Calendar API
+- SendGrid Email API
+- MySQL/MongoDB
 
-<h2 id="license">📜 License</h2>
-<p>Distributed under the MIT License. See <code>LICENSE</code> for more information.</p>
+---
+<h2>📁 Repository Structure</h2>
 
-<div align="center">
-  <p>💬 Contact: <a href="mailto:support@recruitx.ai">support@recruitx.ai</a></p>
-</div>
+<pre>
+RecruitX/
+├── agents/
+│   ├── jd_research_agent.py
+│   ├── jd_drafting_agent.py
+│   ├── job_posting_agent.py
+│   ├── applicant_collector_agent.py
+│   ├── screening_agent.py
+│   ├── interview_scheduler_agent.py
+│   ├── email_automation_agent.py
+│   ├── question_generator_agent.py
+│   ├── transcript_analyst_agent.py
+│   ├── decision_agent.py
+│   └── database_agent.py
+│
+├── tools/
+│   ├── resume_parser.py
+│   ├── calendar_connector.py
+│   ├── email_sender.py
+│   ├── vector_store.py
+│   ├── transcript_parser.py
+│   └── job_board_poster.py
+│
+├── config/
+│   ├── agents.yaml
+│   ├── tools.yaml
+│   ├── tasks.yaml
+│
+├── backend/
+│   ├── main.py
+│   └── api/
+│       └── jd_api.py
+│
+├── frontend/
+│   ├── streamlit_app.py
+│   └── components/
+│       └── jd_form.py
+│
+├── database/
+│   ├── models.py
+│   ├── schema.sql
+│   └── db_connection.py
+│
+├── data/
+│   ├── resumes/
+│   ├── transcripts/
+│
+├── tests/
+│   ├── test_agents.py
+│   ├── test_tools.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+</pre>
