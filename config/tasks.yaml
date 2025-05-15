@@ -1,1 +1,94 @@
-# YAML configuration for tasks.yaml
+jd_research_task:
+  description: >
+    Conduct an interactive requirements-gathering session with the hiring manager.
+    Extract role details, required skills, years of experience, and soft skill expectations.
+  expected_output: >
+    A structured JSON object with fields: title, role_summary, required_skills, experience_level, soft_skills.
+  agent: jd_research_agent
+  output_file: jd_requirements.json
+
+jd_drafting_task:
+  description: >
+    Use the structured data from the research task to generate a compelling,
+    ATS-optimized job description.
+  expected_output: >
+    A professional job description in markdown format, suitable for job board posting.
+  agent: jd_drafting_agent
+  output_file: job_description.md
+
+job_posting_task:
+  description: >
+    Distribute the generated job description to job boards and social media platforms.
+    Track post URLs and analytics tokens.
+  expected_output: >
+    A list of platforms where the job has been posted with post URLs and tracking metadata.
+  agent: job_posting_agent
+  output_file: job_postings.json
+
+resume_collection_task:
+  description: >
+    Collect and parse applicant resumes from different sources (email, uploads, job boards).
+    Normalize and store the data.
+  expected_output: >
+    A structured JSON list of resumes with fields: name, email, experience, education, skills.
+  agent: applicant_collector_agent
+  output_file: resumes.json
+
+screening_task:
+  description: >
+    Compare each applicant’s resume with the job description to calculate a match score (0-10).
+    Generate a score and explanation.
+  expected_output: >
+    A list of applicants with screening scores and analysis notes.
+  agent: screening_agent
+  output_file: screening_results.json
+
+interview_scheduler_task:
+  description: >
+    Coordinate availability between shortlisted candidates and interviewers.
+    Generate and send calendar invites.
+  expected_output: >
+    A summary of scheduled interviews with candidate name, date/time, and calendar links.
+  agent: interview_scheduler_agent
+  output_file: interview_schedule.json
+
+email_automation_task:
+  description: >
+    Generate and send status update emails to all candidates:
+    interview invites, rejections, and follow-ups.
+  expected_output: >
+    Email logs with timestamps, recipient names, and status.
+  agent: email_automation_agent
+  output_file: email_logs.json
+
+question_generation_task:
+  description: >
+    Generate a list of technical and behavioral interview questions tailored to the job role.
+  expected_output: >
+    A categorized list of questions in markdown format.
+  agent: question_generator_agent
+  output_file: interview_questions.md
+
+transcript_analysis_task:
+  description: >
+    Analyze interview transcripts for performance metrics, keywords, and sentiment.
+  expected_output: >
+    A performance score with explanation per candidate, formatted in JSON.
+  agent: transcript_analyst_agent
+  output_file: interview_analysis.json
+
+decision_task:
+  description: >
+    Make a final hiring decision based on screening and interview scores.
+    Update status as "selected" or "rejected".
+  expected_output: >
+    A decision report with final status, score breakdown, and onboarding trigger if selected.
+  agent: decision_agent
+  output_file: final_decisions.json
+
+database_update_task:
+  description: >
+    Store or update candidate records in the system database.
+  expected_output: >
+    Updated database entries with resume, scores, interview results, and decision status.
+  agent: database_agent

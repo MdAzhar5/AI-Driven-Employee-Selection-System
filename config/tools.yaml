@@ -1,1 +1,65 @@
-# YAML configuration for tools.yaml
+pdf_docx_parser:
+  name: Resume Parser
+  purpose: Extract structured text from PDF and DOCX resumes.
+  tech_stack: [PyMuPDF, pdfplumber, python-docx]
+  notes: Use for initial resume preprocessing in applicant collection.
+
+web_scraper:
+  name: Job Board Scraper
+  purpose: Collect job listings or resume data from job board websites.
+  tech_stack: [Playwright, BeautifulSoup, Selenium]
+  notes: Useful for external resume enrichment or competitor analysis.
+
+calendar_api:
+  name: Calendar Integration
+  purpose: Schedule interviews using calendar services.
+  tech_stack: [Google Calendar API, Outlook Graph API]
+  notes: Integrate with Interview Scheduler Agent.
+
+smtp_service:
+  name: Email Automation Service
+  purpose: Send status updates, invites, and onboarding emails.
+  tech_stack: [SendGrid, SMTP, Jinja2 templates]
+  notes: Used by Email Automation Agent.
+
+vector_db:
+  name: Vector Database
+  purpose: Store and query embeddings for semantic search and scoring.
+  tech_stack: [FAISS, Pinecone, Weaviate]
+  notes: Used by Screening Agent and JD Matching logic.
+
+nlp_transformers:
+  name: NLP Transformers
+  purpose: Generate embeddings and perform advanced language processing.
+  tech_stack: [HuggingFace Transformers, SentenceTransformers, GPT-4]
+  notes: Used in JD generation, scoring, question generation, etc.
+
+dbms:
+  name: Core Database
+  purpose: Store all applicant, job, and process-related records.
+  tech_stack: [PostgreSQL, MongoDB, SQLAlchemy]
+  notes: CRUD operations managed by the Database Agent.
+
+job_board_apis:
+  name: Job Posting APIs
+  purpose: Publish job descriptions directly to external job boards.
+  tech_stack: [LinkedIn API, Indeed API, RemoteOK API]
+  notes: Used by Job Posting Agent for syndication.
+
+speech_to_text:
+  name: Speech-to-Text
+  purpose: Transcribe interview audio into text format.
+  tech_stack: [Whisper by OpenAI]
+  notes: Used by Transcript Analyst Agent to process audio calls.
+
+similarity_model:
+  name: Resume-JD Matcher
+  purpose: Calculate cosine similarity between embeddings of resumes and JDs.
+  tech_stack: [SentenceTransformers, scikit-learn cosine_similarity]
+  notes: Core logic used in Screening Agent.
+
+templating_engine:
+  name: Email/Document Templater
+  purpose: Dynamically generate emails and documents.
+  tech_stack: [Jinja2, Mako]
+  notes: Used in Email Automation Agent and JD Generator.
